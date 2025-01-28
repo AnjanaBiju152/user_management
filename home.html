@@ -7,5 +7,17 @@
 </head>
 <body>
     WELCOME HOME
+    <h3 id="user"></h3>
+    <button class="btn btn-primary" onclick="logout()">logot</button>
+    <script>
+        if(localStorage.getItem("loggeduname")){
+            var uname=localStorage.getItem("loggeduname")
+            user.innerHTML=uname;
+        }
+       function logout(){
+        localStorage.removeItem("loggeduname");
+            window.location = "login.html"
+        }
+    </script>
 </body>
 </html>
